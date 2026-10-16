@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f7f5ef"><meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="Моя растяжка">
+<title>Моя растяжка — личный план</title>
+<style>
+:root{--bg:#f7f5ef;--ink:#23323a;--muted:#68777b;--green:#3e7c70;--mint:#dcece5;--coral:#e58c76;--card:#fffefa;--line:#e7e4da}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.45}button{font:inherit;cursor:pointer} .wrap{max-width:850px;margin:auto;padding:18px 16px 100px}
+header{display:flex;justify-content:space-between;align-items:center;padding:10px 0 22px}.brand{font-weight:800;font-size:19px;letter-spacing:-.4px}.brand span{color:var(--green)}.pill{font-size:12px;background:var(--mint);color:var(--green);padding:7px 11px;border-radius:99px;font-weight:700}
+.hero{background:#253b3d;color:white;border-radius:26px;padding:25px 23px;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:190px;height:190px;border-radius:50%;background:#477e70;right:-60px;top:-65px;opacity:.7}.hero>*{position:relative;z-index:1}.eyebrow{text-transform:uppercase;letter-spacing:1.8px;font-size:11px;color:#c8e4d9;font-weight:800}.hero h1{font-size:clamp(29px,7vw,43px);line-height:1.08;letter-spacing:-1.4px;margin:10px 0}.hero p{color:#d9e6e0;max-width:470px;margin:0 0 18px}.hero .stats{display:flex;gap:10px;flex-wrap:wrap}.stat{background:#ffffff17;border:1px solid #ffffff20;border-radius:13px;padding:9px 12px;font-size:13px}
+h2{font-size:22px;letter-spacing:-.5px;margin:27px 0 12px}.muted{color:var(--muted);font-size:14px}.week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:7px}.day{border:1px solid var(--line);background:var(--card);border-radius:14px;padding:10px 3px;text-align:center;color:var(--ink)}.day b{display:block;font-size:12px}.day small{font-size:10px;color:var(--muted)}.day.active{background:var(--green);color:white;border-color:var(--green)}.day.active small{color:#e0f1e9}
+.progressline{height:7px;border-radius:99px;background:#e5e4dc;overflow:hidden;margin:10px 0 4px}.progressline div{height:100%;width:0;background:var(--green);transition:width .2s}
+.toolbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:15px 0}.search{flex:1;min-width:170px;border:1px solid var(--line);border-radius:13px;padding:12px 13px;background:white;font-size:15px}.softbtn{border:1px solid var(--line);background:white;border-radius:12px;padding:11px 13px;color:var(--ink)}
+.exercise{background:var(--card);border:1px solid var(--line);border-radius:20px;margin:12px 0;overflow:hidden}.ex-top{display:flex;gap:14px;padding:15px}.art{width:116px;min-width:116px;height:116px;border-radius:15px;background:#e4f0e9;display:grid;place-items:center;overflow:hidden}.art svg{width:100%;height:100%}.ex-info{flex:1;min-width:0}.tag{font-size:11px;color:var(--green);font-weight:800;text-transform:uppercase;letter-spacing:.7px}.ex-info h3{font-size:17px;line-height:1.2;margin:5px 0}.dose{font-size:13px;color:var(--green);font-weight:750;margin-top:7px}.ex-body{padding:0 16px 16px}.ex-body p{font-size:14px;margin:5px 0 10px}.tip{font-size:13px;background:#f4f1e8;border-radius:11px;padding:10px 12px;color:#536368}.actions{display:flex;gap:8px;margin-top:11px;flex-wrap:wrap}.primary{background:var(--green);color:white;border:0;border-radius:12px;padding:10px 13px;font-weight:700}.donebtn{border:1px solid var(--line);background:white;border-radius:12px;padding:10px 13px}.donebtn.checked{background:var(--mint);color:var(--green);border-color:#c7e0d5}
+.timerbox{display:none;position:sticky;bottom:12px;background:#253b3d;color:white;border-radius:18px;padding:14px 16px;box-shadow:0 8px 30px #172d2d25;z-index:5}.timerbox.show{display:flex;justify-content:space-between;align-items:center;gap:12px}.timerbox strong{font-size:25px;font-variant-numeric:tabular-nums}.timerbox button{border:0;border-radius:10px;padding:9px 12px;background:#dcece5;color:#253b3d;font-weight:750}
+.notice{border:1px solid #e8d3c8;background:#fff5ef;border-radius:16px;padding:14px;font-size:13px;color:#72584f;margin-top:22px}footer{text-align:center;color:var(--muted);font-size:12px;padding:25px 0 0}
+@media(max-width:520px){.wrap{padding:12px 12px 100px}.hero{padding:22px 18px}.week{gap:4px}.day{padding:9px 1px;border-radius:11px}.day b{font-size:11px}.day small{font-size:9px}.ex-top{gap:11px;padding:12px}.art{width:94px;min-width:94px;height:104px}.ex-info h3{font-size:15px}.ex-body{padding:0 12px 13px}}
+</style></head>
+<body><main class="wrap">
+<header><div class="brand">✳ <span>Моя</span> растяжка</div><div class="pill">Личный план</div></header>
+<section class="hero"><div class="eyebrow">Твоя неделя движения</div><h1>Стань гибче.<br>Без спешки.</h1><p>Пошаговые занятия на всё тело, понятные подсказки и таймер для каждой позиции.</p><div class="stats"><div class="stat">📅 7 дней по плану</div><div class="stat">⏱ 10–30 минут</div><div class="stat">🌿 Для начинающих</div></div></section>
+<h2>План на неделю</h2><p class="muted">Выбери день, чтобы увидеть тренировку.</p><div class="week" id="week"></div>
+<div class="toolbar"><input class="search" id="search" placeholder="Найти упражнение…"><button class="softbtn" id="reset">Сбросить отметки</button></div>
+<div style="display:flex;justify-content:space-between;align-items:center"><b id="sessionTitle">Понедельник · Ноги</b><span class="muted" id="count">0 из 5</span></div><div class="progressline"><div id="progress"></div></div>
+<div id="list"></div>
+<div class="notice"><b>Безопасность:</b> сначала разогрейся 3–5 минут. Растяжение должно быть умеренным, без резкой боли, онемения или покалывания. Не пружинь и не дави на суставы. При боли остановись.</div>
+<footer>Прогресс сохраняется на этом устройстве в браузере. Это не медицинская программа.</footer>
+<div class="timerbox" id="timer"><div><div style="font-size:12px;color:#c8e4d9">ТАЙМЕР РАСТЯЖКИ</div><strong id="clock">00:30</strong></div><div style="display:flex;gap:7px"><button id="pause">Пауза</button><button id="stop">Закрыть</button></div></div>
+</main>
+<script>
+const days=[
+{short:"ПН",name:"Понедельник",title:"Ноги и задняя поверхность",mins:"20–25 мин",ids:["fold","calf","ham","child","seated"]},
+{short:"ВТ",name:"Вторник",title:"Бёдра и ягодицы",mins:"20–25 мин",ids:["lunge","quad","figure","butterfly","wide"]},
+{short:"СР",name:"Среда",title:"Спина и плечи",mins:"15–20 мин",ids:["cat","child","shoulder","chest","side"]},
+{short:"ЧТ",name:"Четверг",title:"Восстановление",mins:"10–15 мин",ids:["walk","circles","hipcircles","twist","breath"]},
+{short:"ПТ",name:"Пятница",title:"Ноги и бёдра",mins:"25–30 мин",ids:["fold","lunge","ham","butterfly","figure","calf"]},
+{short:"СБ",name:"Суббота",title:"Всё тело",mins:"20–30 мин",ids:["cat","lunge","figure","fold","chest","child"]},
+{short:"ВС",name:"Воскресенье",title:"Отдых и восстановление",mins:"по желанию",ids:["walk","breath"]}
+];
+const ex={
+fold:["Наклон к бёдрам","2 × 30 секунд","Поставь стопы на ширине таза, слегка согни колени и отводи таз назад. Наклоняйся от тазобедренных суставов, шея расслаблена.","Не тянись к полу любой ценой — важнее ровное и комфортное движение.","↘"],
+calf:["Растяжка икр у стены","30 секунд на сторону","Упрись руками в стену, одну ногу поставь назад. Держи пятку задней ноги на полу, носок направь вперёд.","Не разворачивай стопу наружу; колено задней ноги мягкое.","▱"],
+ham:["Задняя поверхность бедра лёжа","30 секунд на сторону","Ляг на спину, подними одну ногу и придерживай её полотенцем за стопу или бедро. Колено можно немного согнуть.","Не дёргай ногу и не отрывай таз от пола.","⌒"],
+child:["Поза ребёнка","45 секунд","Встань на колени, отведи таз к пяткам и вытягивай руки вперёд. Дыши спокойно.","Если коленям неудобно, подложи сложенное полотенце или выбери другую позу.","◡"],
+seated:["Мягкая складка сидя","2 × 20–30 секунд","Сядь, вытяни ноги и наклоняйся от таза вперёд, сохраняя длинную спину.","Колени можно согнуть; не тяни голову к коленям.","⌁"],
+lunge:["Низкий выпад","30–40 секунд на сторону","Сделай выпад, заднее колено опусти на мягкую подкладку. Мягко подай таз вперёд, корпус держи вертикально.","Переднее колено направлено туда же, куда носок. Не прогибай поясницу.","↗"],
+quad:["Растяжка передней поверхности бедра","30 секунд на сторону","Стоя у опоры, согни ногу и возьми стопу рукой, приближая пятку к ягодице.","Держи колени рядом и не выгибай поясницу. Можно выполнять лёжа на боку.","⌒"],
+figure:["Растяжка ягодиц «четвёрка»","30–40 секунд на сторону","Ляг на спину, положи голень одной ноги на бедро другой и мягко подтяни опорное бедро к себе.","Не дави на колено; движение должно ощущаться в ягодице.","◉"],
+butterfly:["Поза бабочки","2 × 30 секунд","Сядь, соедини стопы и позволь коленям опускаться в стороны под собственным весом. Спина длинная.","Не дави руками на колени и не округляй спину насильно.","◇"],
+wide:["Широкая посадка","30 секунд","Сядь, разведи ноги до комфортного натяжения и слегка наклони корпус от таза.","Не стремись к максимальной ширине; можно немного согнуть колени.","⋀"],
+cat:["Кошка–корова","8–10 повторов","Встань на четвереньки. На выдохе мягко округли спину, на вдохе плавно раскрой грудь без сильного прогиба.","Двигайся медленно, без боли в пояснице и шее.","∿"],
+shoulder:["Растяжка плеча поперёк груди","30 секунд на сторону","Проведи одну руку поперёк груди и другой рукой мягко прижми её выше локтя.","Не поднимай плечо к уху и не тяни за локоть резко.","↔"],
+chest:["Растяжка груди у стены","30 секунд на сторону","Поставь предплечье на стену примерно на уровне плеча и осторожно поверни корпус от руки.","Не выворачивай плечо до боли; уменьши угол при дискомфорте.","╱"],
+side:["Боковое вытяжение","20–30 секунд на сторону","Подними руку над головой и плавно наклонись в противоположную сторону, не поворачивая грудь вниз.","Обе стопы остаются на полу, не задерживай дыхание.","⌁"],
+walk:["Спокойная ходьба","3 минуты","Походи на месте или по комнате в удобном темпе, свободно двигая руками.","Это лёгкий разогрев, не нужно ускоряться до одышки.","↗"],
+circles:["Круги плечами","10 раз в каждую сторону","Медленно подними плечи, направь их назад и вниз, затем повтори вперёд.","Не делай резких кругов и не зажимай шею.","⟳"],
+hipcircles:["Круги тазом","8 раз в каждую сторону","Поставь ноги на ширине таза и выполняй небольшие плавные круги тазом.","Держи колени мягкими; не делай движение через боль.","⟳"],
+twist:["Поворот грудного отдела","6 раз на сторону","На четвереньках проведи рукой под корпусом, затем плавно раскрой её вверх, следя взглядом за кистью.","Таз остаётся устойчивым; поворачивай верх спины, не дави на руку.","↻"],
+breath:["Спокойное дыхание лёжа","2 минуты","Ляг удобно, расслабь плечи. Вдыхай носом и делай спокойный, чуть более длинный выдох.","Не форсируй глубокие вдохи; если кружится голова, дыши обычно.","○"]
+};
+let selected=0,done=JSON.parse(localStorage.getItem("stretchDone")||"{}"),timerInt=null,remaining=30,running=false;
+const $=id=>document.getElementById(id);
+function art(symbol){return `<svg viewBox="0 0 120 120" role="img" aria-label="Схематичная анимация движения"><rect width="120" height="120" rx="15" fill="#e4f0e9"/><circle cx="95" cy="22" r="13" fill="#f2c4a9" opacity=".75"/><path d="M8 98H112" stroke="#b4cfc2" stroke-width="2" stroke-linecap="round"/><g class="figure" stroke="#3e7c70" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"><circle cx="60" cy="25" r="8" fill="#e58c76" stroke="none"/><path d="M60 36 Q55 51 62 64"/><path d="M58 43 Q43 45 35 58"/><path d="M59 44 Q76 43 84 55"/><path d="M62 64 Q48 75 34 91"/><path d="M62 64 Q78 73 90 90"/></g><text x="60" y="113" font-size="9" text-anchor="middle" fill="#47766b">двигайся плавно</text></svg>`}
+function renderWeek(){ $("week").innerHTML=days.map((d,i)=>`<button class="day ${i===selected?'active':''}" data-day="${i}"><b>${d.short}</b><small>${d.mins.split(' ')[0]}</small></button>`).join("");document.querySelectorAll("[data-day]").forEach(b=>b.onclick=()=>{selected=+b.dataset.day;render()})}
+function render(){renderWeek();let d=days[selected];$("sessionTitle").textContent=d.name+" · "+d.title;$("list").innerHTML="";let q=$("search").value.toLowerCase(),ids=d.ids.filter(id=>(ex[id][0]+" "+ex[id][2]).toLowerCase().includes(q));ids.forEach(id=>{let e=ex[id],key=selected+"-"+id,checked=!!done[key];let el=document.createElement("article");el.className="exercise";el.innerHTML=`<div class="ex-top"><div class="art">${art(e[4])}</div><div class="ex-info"><div class="tag">Упражнение</div><h3>${e[0]}</h3><div class="dose">${e[1]}</div></div></div><div class="ex-body"><p>${e[2]}</p><div class="tip">💡 ${e[3]}</div><div class="actions"><button class="primary timerstart" data-seconds="${parseInt(e[1].match(/\\d+/)?.[0]||30)}">Запустить таймер</button><button class="donebtn ${checked?'checked':''}" data-key="${key}">${checked?'✓ Выполнено':'Отметить выполненным'}</button></div></div>`;$("list").appendChild(el)});document.querySelectorAll(".donebtn").forEach(b=>b.onclick=()=>{done[b.dataset.key]=!done[b.dataset.key];localStorage.setItem("stretchDone",JSON.stringify(done));render()});document.querySelectorAll(".timerstart").forEach(b=>b.onclick=()=>startTimer(+b.dataset.seconds));let n=ids.filter(id=>done[selected+"-"+id]).length;$("count").textContent=`${n} из ${ids.length}`;$("progress").style.width=(ids.length?n/ids.length*100:0)+"%"}
+$("search").addEventListener("input",render);$("reset").onclick=()=>{if(confirm("Сбросить все отметки выполнения?")){done={};localStorage.setItem("stretchDone","{}");render()}};
+function fmt(n){return String(Math.floor(n/60)).padStart(2,"0")+":"+String(n%60).padStart(2,"0")}
+function startTimer(sec){clearInterval(timerInt);remaining=sec;running=true;$("timer").classList.add("show");$("clock").textContent=fmt(remaining);$("pause").textContent="Пауза";timerInt=setInterval(()=>{if(!running)return;if(remaining>0){remaining--;$("clock").textContent=fmt(remaining)}else{clearInterval(timerInt);running=false;$("pause").textContent="Готово";if(navigator.vibrate)navigator.vibrate([200,100,200])}},1000)}
+$("pause").onclick=()=>{if(remaining===0)return;running=!running;$("pause").textContent=running?"Пауза":"Продолжить"};$("stop").onclick=()=>{clearInterval(timerInt);running=false;$("timer").classList.remove("show")};
+render();
+</script></body></html>
